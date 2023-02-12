@@ -1,23 +1,28 @@
 .App {
   height: 100vh;
-  background-color: #1a202c;
+  /* background-color: #1a202c; */
+  background-image: url("https://static.news.bitcoin.com/wp-content/uploads/2022/01/shutterstock_2078368537.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
   overflow: auto;
   text-align: center;
 }
 
 .container {
-  height: 100%;
+  height: 95vh;
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 30px 0 30px;
+  /* justify-content: center; */
+  /* padding: 50px; */
+  padding-top: 80px;
+  background-color: rgba(0, 0, 0, 0.567);
 }
 
 .authed-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  /* height: 9%; */
+  /* display: flex; */
+  /* flex-direction: column; */
   padding: 30px;
 }
 
@@ -31,6 +36,8 @@
 .sub-text {
   font-size: 25px;
   color: white;
+  margin: 0;
+  font-style: italic;
 }
 
 .gradient-text {
@@ -57,6 +64,7 @@
   background: -webkit-linear-gradient(left, #60c657, #35aee2);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
+  margin-top: 50px;
 }
 
 .submit-gif-button {
@@ -64,6 +72,15 @@
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
+}
+
+.initialize-button {
+  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-left: 10px;
+  min-width: 500px;
+  margin-top: 50px;
 }
 
 .footer-container {
@@ -95,6 +112,8 @@
   justify-items: center;
   margin: 0;
   padding: 0;
+  border-bottom: 3px dashed grey;
+  padding-bottom: 10px;
 }
 
 .gif-grid .gif-item {
@@ -112,6 +131,25 @@
   object-fit: cover;
 }
 
+.results-container {
+  max-height: 70vh !important;
+  overflow-y: scroll;
+}
+
+.results-container::-webkit-scrollbar {
+  width: 2px;
+}
+
+.results-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.results-container::-webkit-scrollbar-thumb {
+  background-color: #35aee2;
+  outline: 1px solid #60c657;
+  border-radius: 50px;
+}
+
 .connected-container input[type='text'] {
   display: inline-block;
   color: white;
@@ -120,12 +158,82 @@
   height: 60px;
   font-size: 16px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(170, 170, 170, 0.434);
   border: none;
   border-radius: 10px;
   margin: 50px auto;
+  padding: 0 20px;
 }
 
 .connected-container button {
-  height: 50px;
+  height: 59px;
+  width: 180px;
+}
+
+.submitted-by {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.truncated-text {
+  cursor: pointer;
+  position: relative;
+}
+
+.clickable {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tool-tip {
+  position: absolute;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.701);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.user-address {
+  transform: translateY(-50px);
+}
+
+.msg {
+  transform: translateY(5px) translateX(70px);
+}
+
+.pills-container {
+  margin-bottom: 30px;
+}
+
+.pills {
+  background: -webkit-linear-gradient(left, #ce4444, #35aee2);
+  padding: 10px 10px 10px 20px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.cross-button {
+  margin-left: 10px;
+  color: #ce4444;
+  padding: 3px 10px 4px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cross-button:hover {
+  font-weight: bold;
+  background-color: white;
+  color: #ce4444;
+}
+
+.others {
+  margin: 40px;
 }

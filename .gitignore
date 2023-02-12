@@ -1,2 +1,8 @@
 node_modules
 .DS_STORE
+test-ledger
+solana-base
+README.md
+.vscode/*
+LICENSE
+build
